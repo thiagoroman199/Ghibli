@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contacto</h1>
+        <form id="contact-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <label for="tema">Tema:</label>
+            <select id="tema" name="tema" required>
+                <option value="">Selecciona un tema</option>
+                <option value="consulta">Consulta</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <fieldset>
+                <legend>Preferencias:</legend>
+                <label><input type="checkbox" name="newsletter"> Recibir newsletter</label>
+                <label><input type="radio" name="contacto" value="email" required> Contactar por email</label>
+                <label><input type="radio" name="contacto" value="telefono"> Contactar por teléfono</label>
+            </fieldset>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Reset</button>
+        </form>
+        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg" alt="Ghibli Image" class="form-img">
+    </main>
+
+    <footer>
+        <p>Manuel Perez | Valentin Estrada | Thiago Roman</p>
+        <p>GitHub: <a href="#">Repositorio</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
