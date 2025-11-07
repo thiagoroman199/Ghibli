@@ -1,0 +1,319 @@
+:root {
+    --primary: #f2ecdf;
+    --secondary: #8fa7a9;
+    --accent: #f89b4d;
+    --text: #2c2c2c;
+
+    --radius: 14px;
+    --gap: 1rem;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+    background: var(--primary);
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    background: var(--secondary);
+    padding: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+}
+
+.menu a.active,
+.menu a:hover {
+    color: var(--accent);
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: var(--radius);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu.show {
+        display: flex;
+    }
+}
+
+/* TITLES */
+.title {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;           /* 📱 Mobile: 1 col */
+  gap: var(--gap);
+}
+
+/*  Tablet: 2 columnas (>=768px) */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/*  Desktop: 3 columnas (>=1024px) */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* === CARDS HOME (OPTIMIZADAS) === */
+
+.card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: .4rem;
+    color: #222;
+}
+
+.card-content p {
+    color: #555;
+    font-size: .95rem;
+}
+
+/* LOADING / ERROR */
+.loading {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    margin-top: 1rem;
+}
+
+/* FORMULARIO */
+.form {
+    background: white;
+    max-width: 550px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.form input,
+.form textarea,
+.form select {
+    width: 100%;
+    padding: .6rem;
+    border-radius: var(--radius);
+    border: 1px solid #ccc;
+    margin-top: .3rem;
+    margin-bottom: .8rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: .8rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background: var(--secondary);
+}
+
+/* === CONTACTO: BANNER === */
+.contact-banner {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.contact-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-title {
+    color: white;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-shadow: 0px 3px 10px rgba(0,0,0,0.6);
+}
+
+/* CONTACTO FORM WRAPPER */
+.contact-section {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* === ABOUT === */
+.about-team {
+    max-width: 1100px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+    .about-team {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 950px) {
+    .about-team {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.team-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.20);
+}
+
+.team-card h2 {
+    font-size: 1.55rem;
+    margin-bottom: .7rem;
+}
+
+.team-card p {
+    color: #444;
+    font-size: 1rem;
+}
+
+/* PROJECT DETAILS */
+.project-details {
+    max-width: 900px;
+    margin: 3rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.project-details h2 {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+.project-details ul {
+    margin-top: .5rem;
+    padding-left: 1.2rem;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--secondary);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}

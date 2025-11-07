@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Ghibli Studio</div>
+            <button class="nav-toggle" id="nav-toggle">☰</button>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Imagen banner temática -->
+        <div class="contact-banner">
+            <img src="https://image.tmdb.org/t/p/w1280/npOnzAbLh6VOIu3naU5QaEcTepo.jpg" 
+                alt="Studio Ghibli Banner">
+            <div class="banner-overlay">
+                <h1 class="banner-title">Contacto</h1>
+            </div>
+        </div>
+
+        <!-- Formulario -->
+        <section class="contact-section">
+            <form id="contact-form" class="form">
+
+                <label>Nombre:
+                    <input type="text" id="nombre" placeholder="Ingresá tu nombre" required>
+                </label>
+
+                <label>Email:
+                    <input type="email" id="email" placeholder="ejemplo@mail.com" required>
+                </label>
+
+                <label>Teléfono:
+                    <input type="tel" id="telefono" placeholder="Ej: 351-0000000">
+                </label>
+
+                <label>Mensaje:
+                    <textarea id="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
+                </label>
+
+                <label>Tema:
+                    <select id="tema" required>
+                        <option value="">Selecciona un tema</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </label>
+
+                <fieldset>
+                    <legend>Preferencias de contacto:</legend>
+                    <label><input type="checkbox" id="newsletter"> Recibir newsletter</label>
+                    <label><input type="radio" name="contacto" value="email" required> Contactar por email</label>
+                    <label><input type="radio" name="contacto" value="telefono"> Contactar por teléfono</label>
+                </fieldset>
+
+                <div class="buttons">
+                    <button type="submit" class="btn">Enviar</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <p>Manuel Perez | Valentin Estrada | Thiago Roman</p>
+        <p>GitHub: <a href="https://github.com/thiagoroman199/Ghibli" target="_blank">Repositorio</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
