@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Studio Ghibli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Ghibli Studio</div>
+            <button class="nav-toggle" id="nav-toggle">☰</button>
+            <ul class="menu" id="menu">
+                <li><a href="../HTML/index.html" class="active">Home</a></li>
+                <li><a href="../HTML/cargar-pelicula.html">Cargar Película</a></li>
+                <li><a href="../HTML/contacto.html">Contacto</a></li>
+                <li><a href="../HTML/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Contáctanos</h1>
+        <p class="page-subtitle">¿Tienes alguna duda o sugerencia? Escríbenos.</p>
+
+        <div class="form-wrapper">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop" 
+                 alt="Ghibli Spirit" 
+                 class="form-header-img">
+
+            <form id="contact-form" class="form">
+                <label>Nombre Completo:
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                </label>
+                
+                <label>Email:
+                    <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+                </label>
+                
+                <label>Teléfono:
+                    <input type="tel" id="telefono" placeholder="+54 11 ..." pattern="[0-9+ ]*" title="Solo números y signos +" required>
+                </label>
+                
+                <label>Tema:
+                    <select id="tema" required>
+                        <option value="" disabled selected>Selecciona un tema...</option>
+                        <option value="general">Consulta General</option>
+                        <option value="soporte">Soporte Técnico</option>
+                        <option value="colaboracion">Colaboración</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </label>
+
+                <label>Mensaje:
+                    <textarea id="mensaje" rows="4" placeholder="Escribe aquí..." required></textarea>
+                </label>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="terminos" required>
+                    He leído y acepto la política de privacidad.
+                </label>
+
+                <div class="buttons">
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Manuel Perez | Valentin Estrada | Thiago Roman</p>
+    </footer>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cargar Película - Studio Ghibli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Ghibli Studio</div>
+            <button class="nav-toggle" id="nav-toggle">☰</button>
+            <ul class="menu" id="menu">
+                <li><a href="../HTML/index.html" class="active">Home</a></li>
+                <li><a href="../HTML/cargar-pelicula.html">Cargar Película</a></li>
+                <li><a href="../HTML/contacto.html">Contacto</a></li>
+                <li><a href="../HTML/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Agregar Película</h1>
+        <p class="page-subtitle">Añade tu favorita a la colección local.</p>
+
+        <div class="form-wrapper">
+            <form id="upload-form" class="form">
+                <label>Título:
+                    <input type="text" id="titulo-pelicula" placeholder="Ej: El viaje de Chihiro" required>
+                </label>
+
+                <label>Director:
+                    <input type="text" id="director-pelicula" placeholder="Ej: Hayao Miyazaki" required>
+                </label>
+
+                <label>URL Imagen:
+                    <input type="url" id="imagen-pelicula" placeholder="https://..." required>
+                    <small style="color:var(--text-light); font-size:0.8rem;">Pega el enlace directo de la imagen.</small>
+                </label>
+
+                <label>Descripción:
+                    <textarea id="descripcion-pelicula" rows="4" placeholder="Sinopsis..." required></textarea>
+                </label>
+
+                <div class="buttons">
+                    <button type="submit" class="btn">Guardar Película</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Manuel Perez | Valentin Estrada | Thiago Roman</p>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>

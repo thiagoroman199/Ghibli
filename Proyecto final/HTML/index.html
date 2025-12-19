@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio Ghibli Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Ghibli Studio</div>
+            <button class="nav-toggle" id="nav-toggle">☰</button>
+            <ul class="menu" id="menu">
+                <li><a href="../HTML/index.html" class="active">Home</a></li>
+                <li><a href="../HTML/cargar-pelicula.html">Cargar Película</a></li>
+                <li><a href="../HTML/contacto.html">Contacto</a></li>
+                <li><a href="../HTML/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="top-section" style="display: none;">
+            <h2 class="page-title">El Podio Ghibli</h2>
+            <p class="page-subtitle">Las obras maestras aclamadas por la crítica.</p>
+            
+            <div id="popular-container" class="grid"></div>
+        </section>
+
+        <h1 class="page-title" style="margin-top: 2rem;">Colección Completa</h1>
+        <p class="page-subtitle">Explora todas las películas y tus favoritas personales.</p>
+
+        <div id="loading" style="text-align:center; padding:2rem; color:var(--text-light);">Cargando magia...</div>
+        <div id="cards-container" class="grid"></div>
+    </main>
+
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close">&times;</button>
+            <div style="margin-bottom:1rem;">
+                <h2 id="modal-title" style="font-size:1.5rem; margin-bottom:0.2rem;">Título</h2>
+                <div id="modal-director" style="color:var(--accent); font-weight:bold;">Director</div>
+            </div>
+            <img id="modal-img" src="" alt="" style="width:100%; border-radius:8px; margin-bottom:1rem; max-height:250px; object-fit:cover;">
+            <p id="modal-desc" style="color:var(--text-light); line-height:1.6;">Descripción...</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Manuel Perez | Valentin Estrada | Thiago Roman</p>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>
