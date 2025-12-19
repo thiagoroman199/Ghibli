@@ -1,93 +1,65 @@
-Proyecto Studio Ghibli — Sitio Web Responsive
-Este proyecto consiste en un sitio web de tres páginas desarrollado con HTML, CSS y JavaScript. El sitio consume datos en tiempo real de la Studio Ghibli API, muestra información de películas, incluye un formulario validado y una sección “About” con detalles del equipo.
+# 🎬 Studio Ghibli Collection — Proyecto Final
 
-Funcionalidades Principales
-Página Home (index.html)
-Consumo de API pública: Ghibli API.
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 
-El Podio Ghibli: Sección #top-section que destaca las obras maestras aclamadas por la crítica.
+Este proyecto consiste en un sitio web de tres páginas desarrollado con HTML, CSS y JavaScript. El sitio consume datos en tiempo real de la **Studio Ghibli API**, muestra información de películas, incluye un formulario validado y una sección “About” con detalles del equipo.
 
-Renderización dinámica: Muestra de la colección completa mediante tarjetas generadas por JS.
+---
 
-Sistema de Detalles (Modal): Ventana emergente interactiva que muestra imagen, título, director y descripción detallada al hacer clic en una película.
+##  Funcionalidades Principales
 
-Cards con diseño profesional:
+###  Página Home (`index.html`)
+* **Consumo de API pública:** Integración con **Ghibli API**.
+* **El Podio Ghibli:** Sección dinámica que resalta las obras maestras aclamadas por la crítica.
+* **Renderización Dinámica:** Mínimo de 6 películas cargadas automáticamente mediante JS.
+* **Sistema de Modales:** Ventana interactiva para ver detalles (director, descripción e imagen) al hacer clic en las cards.
+* **Diseño Profesional:** Cards con formato cinematográfico, imágenes de alta calidad y transiciones suaves (*hover*).
+* **Grid Responsive:** Adaptabilidad total para Mobile (1 col), Tablet (2 cols) y Desktop (3 cols).
+* **Manejo de estados:** Mensaje de *loading* ("Cargando magia...") y gestión de errores.
 
-Imagen tipo foto (formato cinematográfico).
+###  Página Cargar Película (`cargar-pelicula.html`)
+* **Gestión de Contenido:** Sección dedicada para la administración y carga de nuevas piezas a la colección personal.
+* **Interfaz Intuitiva:** Diseño coherente con la estética del estudio para facilitar la interacción del usuario.
 
-Título y descripción secundaria.
+###  Página de Contacto (`contacto.html`)
+* **Formulario Validado:** Incluye campos de texto, Email, Teléfono, Select, Checkbox y Radio buttons.
+* **Validación JS:** Mensajes de error y éxito personalizados mediante `alert()`.
+* **Automatización:** Reset automático del formulario tras el envío exitoso.
 
-Hover con transición suave.
+###  Página About (`about.html`)
+* **Presentación del equipo:** Cards individuales con información detallada de los desarrolladores.
+* **Sección Técnica:** Documentación sobre decisiones de diseño y uso de la API.
 
-Grid responsive:
+---
 
-Mobile: 1 columna.
+##  Autores y Roles
 
-Tablet: 2 columnas.
+| Desarrollador | Rol | Responsabilidad |
+| :--- | :--- | :--- |
+| **Manuel Perez** | Frontend Developer | Programación del consumo de API, render dinámico de cards e integración de lógica JS. |
+| **Valentín Estrada** | UI/UX Designer | Diseño de interfaz, estilos CSS, maquetado y estructura responsive. |
+| **Thiago Roman** | QA & Logic | Validación de formularios, manejo de errores, LocalStorage y animaciones GSAP. |
 
-Desktop: 3 columnas.
+---
 
-Manejo de estados:
+##  Tecnologías y API
+* **API:** [Studio Ghibli API](https://ghibliapi.vercel.app/films)
+* **Lógica:** JavaScript ES6+ con manipulación del DOM.
+* **Estilos:** CSS3 con variables personalizadas y Grid/Flexbox.
 
-Mensaje de loading ("Cargando magia...").
+---
 
-Manejo de errores si la API falla.
-
-Página Cargar Película (cargar-pelicula.html)
-Gestión de Contenido: Interfaz dedicada para añadir nuevas obras a la colección personal.
-
-Lógica de Almacenamiento: Uso de LocalStorage para persistir los datos de las películas cargadas por el usuario.
-
-Integración: Sincronización con la galería principal para visualizar los nuevos ingresos.
-
-Página de Contacto (contacto.html)
-Formulario completo con: Campo de texto, Email, Teléfono, Select (3 opciones), Checkbox y Radio buttons.
-
-Validación JavaScript:
-
-Mensajes de error con alert().
-
-Mensaje de éxito con alert().
-
-Reset automático del formulario.
-
-Imagen temática: Tipo banner en la parte superior.
-
-Página About (about.html)
-Presentación del equipo: Organizada en 3 cards con roles específicos.
-
-Sección inferior con:
-
-Decisiones de diseño.
-
-Detalles técnicos.
-
-Documentación de la API.
-
-Diseño: Minimalista y profesional.
-
-API Utilizada
-Studio Ghibli API
-
-Endpoint oficial utilizado: https://ghibliapi.vercel.app/films
-
-Autores del Proyecto
-Este proyecto fue desarrollado por:
-
-Manuel Perez
-
-Frontend Developer
-
-Integración de API, lógica JS y renderizado dinámico.
-
-Valentín Estrada
-
-UI/UX Designer
-
-Diseño responsive, estilos CSS y estructura HTML.
-
-Thiago Roman
-
-QA & Logic
-
-Pruebas, validaciones de formularios, manejo de LocalStorage y animaciones GSAP.
+##  Estructura de Carpetas
+```text
+/proyecto-final
+├── /HTML
+│   ├── index.html
+│   ├── cargar-pelicula.html
+│   ├── contacto.html
+│   └── about.html
+├── /CSS
+│   └── style.css
+└── /JS
+    └── script.js
